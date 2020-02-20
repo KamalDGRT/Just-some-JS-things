@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <title>Multiplication</title>
+
+    <style>
+        input:disabled {
+            opacity: 0.6;
+        }
+
+        .statusColumn {
+            position: relative;
+            border: 1px solid #ccc;
+            padding: 2px;
+            margin: 2px;
+            width: 50px;
+
+            white-space: nowrap;
+            display: inline-block;
+            overflow: visible;
+        }
+    </style>
+
+    <script>
+        function add() {
+
+            var x = document.getElementById("a").value;
+            var y = document.getElementById("b").value;
+            var result;
+
+            if (x == "" || y == "")
+                result = "";
+            else {
+                x = parseInt(x);
+                y = parseFloat(y);
+                result = x * y;
+            }
+
+            if (!isNaN(result)) {
+                document.getElementById('c').value = result;
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    Enter 1st Number :
+    <input type="text" id="a" onkeyup="add()">
+    <br>
+    <br>Enter 2nd Number :
+    <input type="text" id="b" onkeyup="add()">
+    <br>
+    <br>Result :
+    <input type="text" id="c" class="statusColumn" disabled="disabled">
+
+</body>
+
+</html>
