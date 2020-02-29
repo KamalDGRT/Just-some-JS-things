@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Positive Values</title>
+
+    <script>
+        // Select your input element.-
+        var number = document.getElementById('number');
+
+        // Listen for input event on numInput.
+        number.onkeydown = function (e) {
+            if (!((e.keyCode > 95 && e.keyCode < 106)
+                || (e.keyCode > 47 && e.keyCode < 58)
+                || e.keyCode == 8)) {
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Just limiting the values to positve
+
+    <form action="" method="post">
+        <input type="number" id="number" min="0" />
+    </form>
+</body>
+
+</html>
